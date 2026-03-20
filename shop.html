@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Botique Fashion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li>
+                        <a href="shop.html">SHOP <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">All Products</a></li>
+                            <li><a href="shop.html">Bestsellers</a></li>
+                            <li><a href="shop.html">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="shop.html">SAREES <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Silk Sarees</a></li>
+                            <li><a href="shop.html">Cotton Sarees</a></li>
+                            <li><a href="shop.html">Designer Sarees</a></li>
+                            <li><a href="shop.html">Party Wear</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="shop.html">COLLECTIONS <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Wedding Edit</a></li>
+                            <li><a href="shop.html">Festive Collection</a></li>
+                            <li><a href="shop.html">Everyday Essentials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="shop.html">LENGHA CHOLI</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html" style="color:#000;">
+                    <h1>Botique</h1>
+                    <span>FASHION</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <button class="icon-btn search-btn"><i class="fas fa-search"></i></button>
+                <div class="icon-btn wishlist-btn"><i class="far fa-heart"></i><span class="badge">0</span></div>
+                <button class="icon-btn user-btn"><i class="far fa-user"></i></button>
+                <div class="icon-btn cart-btn" id="cart-icon"><i class="fas fa-shopping-cart"></i></div>
+                <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" style="display:none;"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button class="close-btn" id="close-mobile-menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">HOME <i class="fas fa-angle-right"></i></a></li>
+            <li><a href="shop.html">SHOP <i class="fas fa-angle-right"></i></a></li>
+            <li><a href="shop.html">SAREES <i class="fas fa-angle-right"></i></a></li>
+        </ul>
+    </div>
+
+    <main style="background: #fff; padding-bottom: 2rem;">
+        <div class="page-header">
+            <h1 class="page-title">Products</h1>
+            <div class="breadcrumb"><a href="index.html">HOME</a> / PRODUCTS</div>
+        </div>
+
+        <!-- Top Collections Section -->
+        <section class="top-collections" style="padding-top: 1rem; padding-bottom: 2rem;">
+            <h2>Top Collections</h2>
+            <div class="collections-flex">
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree1.png" alt="Salwar Sets"></div>
+                    <h5>Salwar Sets</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree2.png" alt="Kurtas"></div>
+                    <h5>Kurtas</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree3.png" alt="Dinu's Collections"></div>
+                    <h5>Dinu's Collections</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree4.png" alt="Twine Cut Work"></div>
+                    <h5>Twine Cut Work</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree5.png" alt="Dupattas"></div>
+                    <h5>Dupattas</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree6.png" alt="Blouses"></div>
+                    <h5>Blouses</h5>
+                </a>
+            </div>
+        </section>
+
+        <div class="shop-container">
+            <!-- Sidebar Filters -->
+            <aside class="sidebar-filters" id="sidebar">
+                <div class="filter-widget">
+                    <h4>Color <i class="fas fa-angle-up"></i></h4>
+                    <div class="filter-list" id="color-filters">
+                        <label class="filter-item">
+                            <input type="checkbox" value="black" class="color-filter"> <span class="color-dot color-black"></span> Black
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" value="blue" class="color-filter"> <span class="color-dot color-blue"></span> Blue
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" value="brown" class="color-filter"> <span class="color-dot color-brown"></span> Brown
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" value="green" class="color-filter"> <span class="color-dot color-green"></span> Green
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" value="multi" class="color-filter"> <span class="color-dot color-multi"></span> Multicolor
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-widget">
+                    <h4>Availability <i class="fas fa-angle-up"></i></h4>
+                    <div class="filter-list" id="avail-filters">
+                        <label class="filter-item">
+                            <input type="checkbox" value="in-stock" class="avail-filter" checked> In stock
+                        </label>
+                        <label class="filter-item">
+                            <input type="checkbox" value="out-of-stock" class="avail-filter"> Out of stock
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="filter-widget">
+                    <h4>Price <i class="fas fa-angle-up"></i></h4>
+                    <div class="price-range">
+                        <div class="price-desc">The highest price is $999.00</div>
+                        <div style="font-size: 0.8rem; margin-top:10px;"><span>$</span></div>
+                        <div class="price-slider-bar">
+                            <div class="price-slider-fill" style="left: 0%; right: 0%;"></div>
+                            <div class="price-slider-knob left"></div>
+                            <div class="price-slider-knob right"></div>
+                        </div>
+                        <div class="price-inputs">
+                            <span style="position:absolute; left:0.6rem;">$</span>
+                            <div class="input-wrap">
+                                <input type="number" id="price-min" value="" placeholder="From">
+                            </div>
+                            <span style="position:static; margin-left:0.5rem; margin-right:0.5rem;">To</span>
+                            <div class="input-wrap">
+                                <input type="number" id="price-max" value="" placeholder="To">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Shop Content -->
+            <div class="shop-main-content">
+                <div class="shop-toolbar">
+                    <div class="toolbar-left">
+                        <button class="btn-black mobile-filter-btn" id="mobile-filter-btn" style="padding: 0.5rem 1rem; margin-right: 1rem;"><i class="fas fa-filter"></i> Filters</button>
+                        <div class="view-toggles">
+                            <button class="view-btn"><i class="fas fa-th"></i></button>
+                            <button class="view-btn active"><i class="fas fa-th-large"></i></button>
+                            <button class="view-btn"><i class="fas fa-th-list"></i></button>
+                            <button class="view-btn"><i class="fas fa-bars"></i></button>
+                        </div>
+                        <span class="product-count">40 products</span>
+                    </div>
+                    <div class="toolbar-right">
+                        <select id="sort-select">
+                            <option value="az">Alphabetically, A-Z</option>
+                            <option value="za">Alphabetically, Z-A</option>
+                            <option value="price-low">Price, low to high</option>
+                            <option value="price-high">Price, high to low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-4" id="product-grid">
+                    <div class="product-item" data-color="black" data-price="155" data-stock="in-stock" data-name="Shop Item 1"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 1"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="501" data-name="Shop Item 1" data-price="155" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 1</h4><p>$155.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="160" data-stock="in-stock" data-name="Shop Item 2"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 2"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="502" data-name="Shop Item 2" data-price="160" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 2</h4><p>$160.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="165" data-stock="in-stock" data-name="Shop Item 3"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 3"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="503" data-name="Shop Item 3" data-price="165" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 3</h4><p>$165.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="170" data-stock="in-stock" data-name="Shop Item 4"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 4"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="504" data-name="Shop Item 4" data-price="170" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 4</h4><p>$170.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="175" data-stock="in-stock" data-name="Shop Item 5"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 5"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="505" data-name="Shop Item 5" data-price="175" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 5</h4><p>$175.00</p></div></div>
+                    <div class="product-item" data-color="black" data-price="180" data-stock="in-stock" data-name="Shop Item 6"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 6"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="506" data-name="Shop Item 6" data-price="180" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 6</h4><p>$180.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="185" data-stock="in-stock" data-name="Shop Item 7"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 7"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="507" data-name="Shop Item 7" data-price="185" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 7</h4><p>$185.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="190" data-stock="in-stock" data-name="Shop Item 8"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 8"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="508" data-name="Shop Item 8" data-price="190" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 8</h4><p>$190.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="195" data-stock="in-stock" data-name="Shop Item 9"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 9"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="509" data-name="Shop Item 9" data-price="195" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 9</h4><p>$195.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="200" data-stock="in-stock" data-name="Shop Item 10"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 10"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="510" data-name="Shop Item 10" data-price="200" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 10</h4><p>$200.00</p></div></div>
+                    <div class="product-item" data-color="black" data-price="205" data-stock="in-stock" data-name="Shop Item 11"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 11"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="511" data-name="Shop Item 11" data-price="205" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 11</h4><p>$205.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="210" data-stock="in-stock" data-name="Shop Item 12"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 12"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="512" data-name="Shop Item 12" data-price="210" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 12</h4><p>$210.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="215" data-stock="in-stock" data-name="Shop Item 13"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 13"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="513" data-name="Shop Item 13" data-price="215" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 13</h4><p>$215.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="220" data-stock="in-stock" data-name="Shop Item 14"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 14"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="514" data-name="Shop Item 14" data-price="220" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 14</h4><p>$220.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="225" data-stock="in-stock" data-name="Shop Item 15"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 15"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="515" data-name="Shop Item 15" data-price="225" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 15</h4><p>$225.00</p></div></div>
+                    <div class="product-item" data-color="black" data-price="230" data-stock="in-stock" data-name="Shop Item 16"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 16"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="516" data-name="Shop Item 16" data-price="230" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 16</h4><p>$230.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="235" data-stock="in-stock" data-name="Shop Item 17"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 17"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="517" data-name="Shop Item 17" data-price="235" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 17</h4><p>$235.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="240" data-stock="in-stock" data-name="Shop Item 18"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 18"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="518" data-name="Shop Item 18" data-price="240" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 18</h4><p>$240.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="245" data-stock="in-stock" data-name="Shop Item 19"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 19"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="519" data-name="Shop Item 19" data-price="245" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 19</h4><p>$245.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="250" data-stock="in-stock" data-name="Shop Item 20"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 20"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="520" data-name="Shop Item 20" data-price="250" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 20</h4><p>$250.00</p></div></div>
+                    <div class="product-item" data-color="black" data-price="255" data-stock="in-stock" data-name="Shop Item 21"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 21"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="521" data-name="Shop Item 21" data-price="255" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 21</h4><p>$255.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="260" data-stock="in-stock" data-name="Shop Item 22"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 22"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="522" data-name="Shop Item 22" data-price="260" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 22</h4><p>$260.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="265" data-stock="in-stock" data-name="Shop Item 23"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 23"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="523" data-name="Shop Item 23" data-price="265" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 23</h4><p>$265.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="270" data-stock="in-stock" data-name="Shop Item 24"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 24"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="524" data-name="Shop Item 24" data-price="270" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 24</h4><p>$270.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="275" data-stock="in-stock" data-name="Shop Item 25"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 25"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="525" data-name="Shop Item 25" data-price="275" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 25</h4><p>$275.00</p></div></div>
+                    <div class="product-item" data-color="black" data-price="280" data-stock="in-stock" data-name="Shop Item 26"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 26"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="526" data-name="Shop Item 26" data-price="280" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 26</h4><p>$280.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="285" data-stock="in-stock" data-name="Shop Item 27"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 27"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="527" data-name="Shop Item 27" data-price="285" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 27</h4><p>$285.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="290" data-stock="in-stock" data-name="Shop Item 28"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 28"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="528" data-name="Shop Item 28" data-price="290" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 28</h4><p>$290.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="295" data-stock="in-stock" data-name="Shop Item 29"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 29"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="529" data-name="Shop Item 29" data-price="295" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 29</h4><p>$295.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="300" data-stock="in-stock" data-name="Shop Item 30"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 30"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="530" data-name="Shop Item 30" data-price="300" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 30</h4><p>$300.00</p></div></div>
+                    <div class="product-item" data-color="black" data-price="305" data-stock="in-stock" data-name="Shop Item 31"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 31"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="531" data-name="Shop Item 31" data-price="305" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 31</h4><p>$305.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="310" data-stock="in-stock" data-name="Shop Item 32"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 32"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="532" data-name="Shop Item 32" data-price="310" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 32</h4><p>$310.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="315" data-stock="in-stock" data-name="Shop Item 33"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 33"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="533" data-name="Shop Item 33" data-price="315" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 33</h4><p>$315.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="320" data-stock="in-stock" data-name="Shop Item 34"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 34"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="534" data-name="Shop Item 34" data-price="320" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 34</h4><p>$320.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="325" data-stock="in-stock" data-name="Shop Item 35"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 35"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="535" data-name="Shop Item 35" data-price="325" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 35</h4><p>$325.00</p></div></div>
+                    <div class="product-item" data-color="black" data-price="330" data-stock="in-stock" data-name="Shop Item 36"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 36"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="536" data-name="Shop Item 36" data-price="330" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 36</h4><p>$330.00</p></div></div>
+                    <div class="product-item" data-color="blue" data-price="335" data-stock="in-stock" data-name="Shop Item 37"><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Shop Item 37"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="537" data-name="Shop Item 37" data-price="335" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 37</h4><p>$335.00</p></div></div>
+                    <div class="product-item" data-color="brown" data-price="340" data-stock="in-stock" data-name="Shop Item 38"><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Shop Item 38"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="538" data-name="Shop Item 38" data-price="340" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 38</h4><p>$340.00</p></div></div>
+                    <div class="product-item" data-color="green" data-price="345" data-stock="in-stock" data-name="Shop Item 39"><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Shop Item 39"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="539" data-name="Shop Item 39" data-price="345" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 39</h4><p>$345.00</p></div></div>
+                    <div class="product-item" data-color="multi" data-price="350" data-stock="in-stock" data-name="Shop Item 40"><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Shop Item 40"><div class="hover-actions"><button class="btn-quickview"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="540" data-name="Shop Item 40" data-price="350" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Shop Item 40</h4><p>$350.00</p></div></div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar & Quick View Modal Logic omitted for brevity but they are included via script.js overlay insertion -->
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="close-btn" id="close-search">&times;</button>
+        <div class="search-container">
+            <h3>WHAT ARE YOU LOOKING FOR?</h3>
+            <form id="global-search-form" action="shop.html" method="GET">
+                <input type="text" name="search" placeholder="Search products..." required>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar"><div class="cart-header"><h3>Shopping Bag</h3><button class="close-btn" id="close-cart">&times;</button></div><div class="cart-items" id="cart-items"></div><div class="cart-footer"><div class="cart-total"><span>Total:</span><span id="cart-total-price">$0.00</span></div><button class="btn-black" id="checkout-btn" style="width: 100%; border-radius: 0; padding: 1.2rem;">CHECKOUT</button></div></div><div class="cart-overlay" id="cart-overlay"></div>
+    
+    <!-- Modals -->
+    <div class="modal" id="quickview-modal"><div class="modal-content"><button class="close-btn modal-close" id="close-quickview">&times;</button><div class="modal-grid"><div class="modal-img"><img src="" alt="Product" id="qv-img"></div><div class="modal-info"><h2 id="qv-title" style="font-family:'Playfair Display', serif; margin-bottom:1rem; font-size:2rem;">Product</h2>
+<p id="qv-desc" style="color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;"></p><p class="qv-price" id="qv-price" style="font-size: 1.3rem; margin-bottom: 2rem;">$0</p><div class="qv-selectors" style="margin-bottom: 2rem;"><label style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Size (For Jackets / Stitched Items)</label><select id="qv-size" style="width:100%; padding:0.8rem; border:1px solid #ddd; margin-bottom:1rem; outline:none;"><option value="Not Applicable">Not Applicable / Free Size</option><option value="S">Small (S)</option><option value="M">Medium (M)</option><option value="L">Large (L)</option><option value="XL">Extra Large (XL)</option></select><label style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Saree Fall & Edging</label><select id="qv-fall" style="width:100%; padding:0.8rem; border:1px solid #ddd; margin-bottom:1rem; outline:none;"><option value="No" data-price="0">Without Fall (Included)</option><option value="Yes" data-price="12">Add Fall & Pico (+$12.00)</option></select><label style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Blouse Stitching</label><select id="qv-blouse" style="width:100%; padding:0.8rem; border:1px solid #ddd; outline:none;"><option value="Unstitched" data-price="0">Unstitched Fabric (Included)</option><option value="Stitched" data-price="28">Custom Stitching (+$28.00)</option></select></div><button class="btn-black" id="qv-add-cart" style="width: 100%; padding: 1rem;">ADD TO CART</button></div></div></div></div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content checkout-content" style="max-width: 500px; max-height: 90vh; overflow-y:auto; padding:0;">
+            <div style="background:#f9f9f9; padding:1.5rem; border-bottom:1px solid #eee; text-align:center; position:relative;"><h3 style="font-family:'Playfair Display', serif; font-size:1.5rem; margin:0;">Secure Checkout</h3><button class="close-btn modal-close" id="close-payment" style="position:absolute; right:1.5rem; top:1.5rem; font-size:1.5rem;">&times;</button></div>
+            <div id="payment-body" style="padding: 2rem;">
+                <input type="email" placeholder="Email Address" class="checkout-input" required>
+                <div style="display:flex; gap:10px; margin-top:10px;"><input type="text" placeholder="First Name" class="checkout-input" required><input type="text" placeholder="Last Name" class="checkout-input" required></div>
+                <input type="text" placeholder="Shipping Address" class="checkout-input" style="margin-top:10px;" required>
+                <div style="display:flex; gap:10px; margin-top:10px; margin-bottom: 2rem;"><input type="text" placeholder="City" class="checkout-input" required><input type="text" placeholder="ZIP" class="checkout-input" required></div>
+                <div class="payment-tabs" style="display:flex; margin-bottom:15px; border:1px solid #000; overflow:hidden;"><button class="pay-btn active" style="flex:1; padding:0.8rem; border:none; background:#000; color:#fff; cursor:pointer;">Credit Card</button><button class="pay-btn" style="flex:1; padding:0.8rem; border:none; background:#fff; color:#000; border-left:1px solid #000; cursor:pointer;">PayPal</button></div>
+                <input type="text" placeholder="Card Number" class="checkout-input"><div style="display:flex; gap:10px; margin-top:10px;"><input type="text" placeholder="MM/YY" class="checkout-input"><input type="text" placeholder="CVV" class="checkout-input"></div>
+                <button class="btn-black" id="process-pay-btn" style="width:100%; margin-top: 2rem; padding: 1.2rem;">PAY NOW</button>
+            </div>
+            <div id="payment-success" style="display:none; padding:4rem 2rem; text-align:center;"><i class="far fa-check-circle" style="font-size: 4rem; color: #28a745; margin-bottom: 1rem;"></i><h2 style="font-family: 'Playfair Display', serif; margin-bottom:1rem;">Payment Successful</h2><button class="btn-black" id="continue-shopping" style="width:100%; padding:1rem;">CONTINUE SHOPPING</button></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <!-- Col 1 Logo -->
+            <div class="footer-col brand-col">
+                <div class="logo">
+                    <h1>Sareeify</h1>
+                    <span>FASHION</span>
+                </div>
+            </div>
+            <!-- Col 2 -->
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="shop.html">Shop with us</a>
+                <a href="contact.html">Faqs</a>
+            </div>
+            <!-- Col 3 -->
+            <div class="footer-col">
+                <h4>My Account</h4>
+                <a href="#">Login</a>
+                <a href="#">Account</a>
+                <a href="shop.html">Wishlist</a>
+                <a href="shop.html">Compare</a>
+            </div>
+            <!-- Col 4 -->
+            <div class="footer-col">
+                <h4>Information</h4>
+                <a href="#">Search</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <!-- Col 5 -->
+            <div class="footer-col stay-connect">
+                <h4>Stay Connect</h4>
+                <div class="social-circles">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p>Email:<br>speedosaree@gmail.com</p>
+                    <p>Customer Care Number:<br>+91 9876543210</p>
+                </div>
+                <h4>Join with List</h4>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy;2026 Botique Fashion All Rights Reserved
+            </div>
+            <div class="bottom-settings">
+                <span class="dropdown">English <i class="fas fa-angle-down"></i></span>
+                <span class="dropdown"><img src="https://flagcdn.com/w20/us.png" alt="US" class="flag-icon"> USD <i class="fas fa-angle-down"></i></span>
+            </div>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-discover"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+

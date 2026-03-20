@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botique Fashion | E-Commerce</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons via FontAwesome (assuming base icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- 1. Top Promo Bar -->
+    <div class="promo-bar">
+        <div class="promo-container">
+            <div class="promo-socials">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+            <div class="promo-text">
+                Pay Online & GET 10% OFF on your Purchase. USE CODE: PREPAID
+            </div>
+            <div class="promo-settings">
+                <span><img src="https://flagcdn.com/w20/us.png" alt="US" class="flag-icon"> USD <i class="fas fa-angle-down"></i></span>
+                <span>English <i class="fas fa-angle-down"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Left Nav -->
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li>
+                        <a href="shop.html">SHOP <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">All Products</a></li>
+                            <li><a href="shop.html">Bestsellers</a></li>
+                            <li><a href="shop.html">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="shop.html">SAREES <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Silk Sarees</a></li>
+                            <li><a href="shop.html">Cotton Sarees</a></li>
+                            <li><a href="shop.html">Designer Sarees</a></li>
+                            <li><a href="shop.html">Party Wear</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="shop.html">COLLECTIONS <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Wedding Edit</a></li>
+                            <li><a href="shop.html">Festive Collection</a></li>
+                            <li><a href="shop.html">Everyday Essentials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="shop.html">LENGHA CHOLI</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Center Logo -->
+            <div class="logo">
+                <a href="index.html" style="color:#000;">
+                    <h1>Botique</h1>
+                    <span>FASHION</span>
+                </a>
+            </div>
+            
+            <!-- Right Icons -->
+            <div class="nav-right">
+                <button class="icon-btn search-btn"><i class="fas fa-search"></i></button>
+                <div class="icon-btn wishlist-btn">
+                    <i class="far fa-heart"></i>
+                    <span class="badge">0</span>
+                </div>
+                <button class="icon-btn user-btn"><i class="far fa-user"></i></button>
+                <div class="icon-btn cart-btn" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <!-- Mobile menu toggle -->
+                <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" style="display:none;"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button class="close-btn" id="close-mobile-menu">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">HOME <i class="fas fa-angle-right"></i></a></li>
+            <li><a href="shop.html">SHOP <i class="fas fa-angle-right"></i></a></li>
+            <li><a href="shop.html">SAREES <i class="fas fa-angle-right"></i></a></li>
+            <li><a href="shop.html">COLLECTIONS <i class="fas fa-angle-right"></i></a></li>
+            <li><a href="shop.html">LENGHA CHOLI <i class="fas fa-angle-right"></i></a></li>
+        </ul>
+        <div class="mobile-nav-footer">
+            <a href="#"><i class="far fa-user"></i> Login / Register</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section Slider -->
+        <section class="hero-slider-section">
+            <div class="hero-slides">
+                <div class="hero-slide active">
+                    <img loading="lazy" src="images/hero_wedding.png" alt="Wedding Collection">
+                    <div class="hero-content">
+                        <h2>Wedding Collection</h2>
+                        <p>Celebrate Love. Discover Our Wedding Collection.</p>
+                        <button class="btn-black" onclick="window.location.href='shop.html'">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <img loading="lazy" src="images/hero_festive.png" alt="Festive Collection">
+                    <div class="hero-content">
+                        <h2>Festive Collection</h2>
+                        <p>Unmatched elegance and luxury for every occasion.</p>
+                        <button class="btn-black" onclick="window.location.href='shop.html'">EXPLORE</button>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <img loading="lazy" src="images/hero-saree.png" alt="Premium Silks">
+                    <div class="hero-content">
+                        <h2>Premium Silks</h2>
+                        <p>Timeless elegance crafted for the modern individual.</p>
+                        <button class="btn-black" onclick="window.location.href='shop.html'">SHOP NOW</button>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <img loading="lazy" src="images/about-saree.png" alt="Modern Fusion">
+                    <div class="hero-content">
+                        <h2>Modern Fusion</h2>
+                        <p>Chic, trendy, and breathtaking pieces designed for you.</p>
+                        <button class="btn-black" onclick="window.location.href='shop.html'">EXPLORE STYLES</button>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev-btn" id="hero-prev"><i class="fas fa-angle-left"></i></button>
+            <button class="slider-btn next-btn" id="hero-next"><i class="fas fa-angle-right"></i></button>
+            <div class="slider-dots" id="hero-dots"></div>
+        </section>
+
+        <!-- 4. Features Bar -->
+        <section class="features-bar">
+            <div class="feature">
+                <i class="fas fa-truck-fast"></i>
+                <span>FREE SHIPPING</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <span>SUPPORT 24/7</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-hand-holding-dollar"></i>
+                <span>100% MONEY BACK</span>
+            </div>
+            <div class="feature">
+                <i class="far fa-credit-card"></i>
+                <span>SECURE PAYMENTS</span>
+            </div>
+        </section>
+
+        <!-- Top Collections Section -->
+        <section class="top-collections" style="padding-top: 1rem; padding-bottom: 2rem;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.5rem; text-align: center;">Top Collections</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem; font-family: 'Jost', sans-serif;">Curated collections crafted for comfort, tradition, and family moments.</p>
+            <div class="collections-flex">
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree1.png" alt="Salwar Sets"></div>
+                    <h5>Salwar Sets</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree2.png" alt="Kurtas"></div>
+                    <h5>Kurtas</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree3.png" alt="Dinu's Collections"></div>
+                    <h5>Dinu's Collections</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree4.png" alt="Twine Cut Work"></div>
+                    <h5>Twine Cut Work</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree5.png" alt="Dupattas"></div>
+                    <h5>Dupattas</h5>
+                </a>
+                <a href="shop.html" class="collection-circle">
+                    <div class="img-wrap"><img src="images/saree6.png" alt="Blouses"></div>
+                    <h5>Blouses</h5>
+                </a>
+            </div>
+        </section>
+
+        <!-- 5A. Promo Image Grids (4 columns) -->
+        <section class="promo-grids section-padding">
+            <div class="grid-4">
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Luxe Collection 1"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="101" data-name="Luxe Collection 1" data-price="210" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 1</h4><p>$210.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Luxe Collection 2"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="102" data-name="Luxe Collection 2" data-price="220" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 2</h4><p>$220.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Luxe Collection 3"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="103" data-name="Luxe Collection 3" data-price="230" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 3</h4><p>$230.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Luxe Collection 4"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="104" data-name="Luxe Collection 4" data-price="240" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 4</h4><p>$240.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree5.png" alt="Luxe Collection 5"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="105" data-name="Luxe Collection 5" data-price="250" data-img="images/saree5.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 5</h4><p>$250.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree6.png" alt="Luxe Collection 6"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="106" data-name="Luxe Collection 6" data-price="260" data-img="images/saree6.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 6</h4><p>$260.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_blue_ai.png" alt="Luxe Collection 7"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="107" data-name="Luxe Collection 7" data-price="270" data-img="images/saree_blue_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 7</h4><p>$270.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_red_ai.png" alt="Luxe Collection 8"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="108" data-name="Luxe Collection 8" data-price="280" data-img="images/saree_red_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 8</h4><p>$280.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Luxe Collection 9"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="109" data-name="Luxe Collection 9" data-price="290" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 9</h4><p>$290.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Luxe Collection 10"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="110" data-name="Luxe Collection 10" data-price="300" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 10</h4><p>$300.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Luxe Collection 11"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="111" data-name="Luxe Collection 11" data-price="310" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 11</h4><p>$310.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Luxe Collection 12"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="112" data-name="Luxe Collection 12" data-price="320" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 12</h4><p>$320.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree5.png" alt="Luxe Collection 13"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="113" data-name="Luxe Collection 13" data-price="330" data-img="images/saree5.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 13</h4><p>$330.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree6.png" alt="Luxe Collection 14"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="114" data-name="Luxe Collection 14" data-price="340" data-img="images/saree6.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 14</h4><p>$340.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_blue_ai.png" alt="Luxe Collection 15"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="115" data-name="Luxe Collection 15" data-price="350" data-img="images/saree_blue_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 15</h4><p>$350.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_red_ai.png" alt="Luxe Collection 16"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="116" data-name="Luxe Collection 16" data-price="360" data-img="images/saree_red_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 16</h4><p>$360.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Luxe Collection 17"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="117" data-name="Luxe Collection 17" data-price="370" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 17</h4><p>$370.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Luxe Collection 18"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="118" data-name="Luxe Collection 18" data-price="380" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 18</h4><p>$380.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Luxe Collection 19"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="119" data-name="Luxe Collection 19" data-price="390" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 19</h4><p>$390.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Luxe Collection 20"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="120" data-name="Luxe Collection 20" data-price="400" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Luxe Collection 20</h4><p>$400.00</p></div></div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section class="store-section section-padding" style="background: #fff;">
+            <div style="text-align:center; margin-bottom: 2rem;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size:2rem;">New Arrivals</h2>
+                <p style="font-family:'Jost', sans-serif; color: #666; font-size: 0.9rem;">Fresh styles just dropped</p>
+            </div>
+            <div class="grid-4">
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_red_ai.png" alt="Festive Aura 1"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="301" data-name="Festive Aura 1" data-price="310" data-img="images/saree_red_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 1</h4><p>$310.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_blue_ai.png" alt="Festive Aura 2"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="302" data-name="Festive Aura 2" data-price="320" data-img="images/saree_blue_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 2</h4><p>$320.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree6.png" alt="Festive Aura 3"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="303" data-name="Festive Aura 3" data-price="330" data-img="images/saree6.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 3</h4><p>$330.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree5.png" alt="Festive Aura 4"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="304" data-name="Festive Aura 4" data-price="340" data-img="images/saree5.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 4</h4><p>$340.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Festive Aura 5"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="305" data-name="Festive Aura 5" data-price="350" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 5</h4><p>$350.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Festive Aura 6"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="306" data-name="Festive Aura 6" data-price="360" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 6</h4><p>$360.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Festive Aura 7"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="307" data-name="Festive Aura 7" data-price="370" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 7</h4><p>$370.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Festive Aura 8"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="308" data-name="Festive Aura 8" data-price="380" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 8</h4><p>$380.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_red_ai.png" alt="Festive Aura 9"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="309" data-name="Festive Aura 9" data-price="390" data-img="images/saree_red_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 9</h4><p>$390.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_blue_ai.png" alt="Festive Aura 10"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="310" data-name="Festive Aura 10" data-price="400" data-img="images/saree_blue_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 10</h4><p>$400.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree6.png" alt="Festive Aura 11"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="311" data-name="Festive Aura 11" data-price="410" data-img="images/saree6.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 11</h4><p>$410.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree5.png" alt="Festive Aura 12"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="312" data-name="Festive Aura 12" data-price="420" data-img="images/saree5.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 12</h4><p>$420.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree4.png" alt="Festive Aura 13"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="313" data-name="Festive Aura 13" data-price="430" data-img="images/saree4.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 13</h4><p>$430.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree3.png" alt="Festive Aura 14"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="314" data-name="Festive Aura 14" data-price="440" data-img="images/saree3.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 14</h4><p>$440.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree2.png" alt="Festive Aura 15"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="315" data-name="Festive Aura 15" data-price="450" data-img="images/saree2.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 15</h4><p>$450.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree1.png" alt="Festive Aura 16"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="316" data-name="Festive Aura 16" data-price="460" data-img="images/saree1.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 16</h4><p>$460.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_red_ai.png" alt="Festive Aura 17"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="317" data-name="Festive Aura 17" data-price="470" data-img="images/saree_red_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 17</h4><p>$470.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree_blue_ai.png" alt="Festive Aura 18"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="318" data-name="Festive Aura 18" data-price="480" data-img="images/saree_blue_ai.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 18</h4><p>$480.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree6.png" alt="Festive Aura 19"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="319" data-name="Festive Aura 19" data-price="490" data-img="images/saree6.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 19</h4><p>$490.00</p></div></div>
+                <div class="product-item" data-desc="Beautifully crafted luxury item, perfect for elegant settings. Made with premium materials for a comfortable and refined look."><div class="img-wrap"><img loading="lazy" src="images/saree5.png" alt="Festive Aura 20"><div class="hover-actions"><button class="btn-quickview" title="Quick View"><i class="far fa-eye"></i></button><button class="btn-add-cart" data-id="320" data-name="Festive Aura 20" data-price="500" data-img="images/saree5.png"><i class="fas fa-shopping-bag"></i></button></div></div><div class="prod-info"><h4>Festive Aura 20</h4><p>$500.00</p></div></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. Footer -->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <!-- Col 1 Logo -->
+            <div class="footer-col brand-col">
+                <div class="logo">
+                    <h1>Botique</h1>
+                    <span>FASHION</span>
+                </div>
+            </div>
+            <!-- Col 2 -->
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="shop.html">Shop with us</a>
+                <a href="contact.html">Faqs</a>
+            </div>
+            <!-- Col 3 -->
+            <div class="footer-col">
+                <h4>My Account</h4>
+                <a href="#">Login</a>
+                <a href="#">Account</a>
+                <a href="shop.html">Wishlist</a>
+                <a href="shop.html">Compare</a>
+            </div>
+            <!-- Col 4 -->
+            <div class="footer-col">
+                <h4>Information</h4>
+                <a href="#">Search</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <!-- Col 5 -->
+            <div class="footer-col stay-connect">
+                <h4>Stay Connect</h4>
+                <div class="social-circles">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p>Email:<br>speedosaree@gmail.com</p>
+                    <p>Customer Care Number:<br>+91 9876543210</p>
+                </div>
+                <h4>Join with List</h4>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy;2026 Botique Fashion All Rights Reserved
+            </div>
+            <div class="bottom-settings">
+                <span class="dropdown">English <i class="fas fa-angle-down"></i></span>
+                <span class="dropdown"><img src="https://flagcdn.com/w20/us.png" alt="US" class="flag-icon"> USD <i class="fas fa-angle-down"></i></span>
+            </div>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-discover"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="close-btn" id="close-search">&times;</button>
+        <div class="search-container">
+            <h3>WHAT ARE YOU LOOKING FOR?</h3>
+            <form id="global-search-form" action="shop.html" method="GET">
+                <input type="text" name="search" placeholder="Search products..." required>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Bag</h3>
+            <button class="close-btn" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price" style="font-family: 'Playfair Display', serif; font-weight:600;">$0.00</span>
+            </div>
+            <button class="btn-black" id="checkout-btn" style="width: 100%; border-radius: 0; padding: 1.2rem;">CHECKOUT</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickview-modal">
+        <div class="modal-content">
+            <button class="close-btn modal-close" id="close-quickview">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-img">
+                    <img src="" alt="Product" id="qv-img">
+                </div>
+                <div class="modal-info">
+                    <h2 id="qv-title" style="font-family:'Playfair Display', serif; margin-bottom:1rem; font-size:2rem;">Product</h2>
+<p id="qv-desc" style="color: #666; font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.6;"></p>
+                    <p class="qv-price" id="qv-price" style="font-size: 1.3rem; margin-bottom: 2rem;">$0</p>
+                    
+                    <div class="qv-selectors" style="margin-bottom: 2rem;">
+                        <label style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Size (For Jackets / Stitched Items)</label>
+                        <select id="qv-size" style="width:100%; padding:0.8rem; border:1px solid #ddd; margin-bottom:1rem; outline:none;">
+                            <option value="Not Applicable">Not Applicable / Free Size</option>
+                            <option value="S">Small (S)</option>
+                            <option value="M">Medium (M)</option>
+                            <option value="L">Large (L)</option>
+                            <option value="XL">Extra Large (XL)</option>
+                        </select>
+
+                        <label style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Saree Fall & Edging</label>
+                        <select id="qv-fall" style="width:100%; padding:0.8rem; border:1px solid #ddd; margin-bottom:1rem; outline:none;">
+                            <option value="No" data-price="0">Without Fall (Included)</option>
+                            <option value="Yes" data-price="12">Add Fall & Pico (+$12.00)</option>
+                        </select>
+
+                        <label style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Blouse Stitching</label>
+                        <select id="qv-blouse" style="width:100%; padding:0.8rem; border:1px solid #ddd; outline:none;">
+                            <option value="Unstitched" data-price="0">Unstitched Fabric (Included)</option>
+                            <option value="Stitched" data-price="28">Custom Stitching (+$28.00)</option>
+                        </select>
+                    </div>
+
+                    <button class="btn-black" id="qv-add-cart" style="width: 100%; padding: 1rem;">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="payment-modal">
+        <div class="modal-content checkout-content" style="max-width: 500px; max-height: 90vh; overflow-y:auto; padding:0;">
+            <div style="background:#f9f9f9; padding:1.5rem; border-bottom:1px solid #eee; text-align:center; position:relative;">
+                <h3 style="font-family:'Playfair Display', serif; font-size:1.5rem; margin:0;">Secure Checkout</h3>
+                <button class="close-btn modal-close" id="close-payment" style="position:absolute; right:1.5rem; top:1.5rem; font-size:1.5rem;">&times;</button>
+            </div>
+            <div id="payment-body" style="padding: 2rem;">
+                <input type="email" placeholder="Email Address" class="checkout-input" required>
+                <div style="display:flex; gap:10px; margin-top:10px;">
+                    <input type="text" placeholder="First Name" class="checkout-input" required>
+                    <input type="text" placeholder="Last Name" class="checkout-input" required>
+                </div>
+                <input type="text" placeholder="Shipping Address" class="checkout-input" style="margin-top:10px;" required>
+                <div style="display:flex; gap:10px; margin-top:10px; margin-bottom: 2rem;">
+                    <input type="text" placeholder="City" class="checkout-input" required>
+                    <input type="text" placeholder="ZIP" class="checkout-input" required>
+                </div>
+
+                <div class="payment-tabs" style="display:flex; margin-bottom:15px; border:1px solid #000; overflow:hidden;">
+                    <button class="pay-btn active" style="flex:1; padding:0.8rem; border:none; background:#000; color:#fff; cursor:pointer;">Credit Card</button>
+                    <button class="pay-btn" style="flex:1; padding:0.8rem; border:none; background:#fff; color:#000; border-left:1px solid #000; cursor:pointer;">PayPal</button>
+                </div>
+
+                <input type="text" placeholder="Card Number" class="checkout-input">
+                <div style="display:flex; gap:10px; margin-top:10px;">
+                    <input type="text" placeholder="MM/YY" class="checkout-input">
+                    <input type="text" placeholder="CVV" class="checkout-input">
+                </div>
+
+                <button class="btn-black" id="process-pay-btn" style="width:100%; margin-top: 2rem; padding: 1.2rem;">PAY NOW</button>
+            </div>
+            
+            <div id="payment-success" style="display:none; padding:4rem 2rem; text-align:center;">
+                <i class="far fa-check-circle" style="font-size: 4rem; color: #28a745; margin-bottom: 1rem;"></i>
+                <h2 style="font-family: 'Playfair Display', serif; margin-bottom:1rem;">Payment Successful</h2>
+                <p style="color:#666; margin-bottom:2rem;">Your order is confirmed. A receipt has been sent to your email.</p>
+                <button class="btn-black" id="continue-shopping" style="width:100%; padding:1rem;">CONTINUE SHOPPING</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+

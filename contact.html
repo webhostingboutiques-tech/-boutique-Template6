@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Botique Fashion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <nav class="nav-left">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li>
+                        <a href="shop.html">SHOP <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">All Products</a></li>
+                            <li><a href="shop.html">Bestsellers</a></li>
+                            <li><a href="shop.html">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="shop.html">SAREES <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Silk Sarees</a></li>
+                            <li><a href="shop.html">Cotton Sarees</a></li>
+                            <li><a href="shop.html">Designer Sarees</a></li>
+                            <li><a href="shop.html">Party Wear</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="shop.html">COLLECTIONS <i class="fas fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Wedding Edit</a></li>
+                            <li><a href="shop.html">Festive Collection</a></li>
+                            <li><a href="shop.html">Everyday Essentials</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="shop.html">LENGHA CHOLI</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html" style="color:#000;">
+                    <h1>Botique</h1>
+                    <span>FASHION</span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <button class="icon-btn search-btn"><i class="fas fa-search"></i></button>
+                <div class="icon-btn wishlist-btn"><i class="far fa-heart"></i><span class="badge">0</span></div>
+                <button class="icon-btn user-btn"><i class="far fa-user"></i></button>
+                <div class="icon-btn cart-btn" id="cart-icon"><i class="fas fa-shopping-cart"></i></div>
+                <button class="icon-btn mobile-menu-btn" id="mobile-menu-btn" style="display:none;"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <div class="mobile-nav-header"><h3>Menu</h3><button class="close-btn" id="close-mobile-menu">&times;</button></div>
+        <ul class="mobile-nav-links"><li><a href="index.html">HOME <i class="fas fa-angle-right"></i></a></li><li><a href="shop.html">SHOP <i class="fas fa-angle-right"></i></a></li></ul>
+    </div>
+
+    <main class="section-padding" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 class="page-title" style="margin-bottom: 2rem;">Contact Us</h2>
+        <p style="margin-bottom: 2rem; color: #555;">We would love to hear from you. Please fill out the form below and we will get in touch shortly.</p>
+        <form style="display:flex; flex-direction:column; gap:1.5rem; text-align:left;">
+            <input type="text" placeholder="Your Name" style="padding: 1rem; border: 1px solid #ccc; width: 100%; font-family: 'Jost', sans-serif;" required>
+            <input type="email" placeholder="Your Email" style="padding: 1rem; border: 1px solid #ccc; width: 100%; font-family: 'Jost', sans-serif;" required>
+            <textarea placeholder="Your Message" rows="6" style="padding: 1rem; border: 1px solid #ccc; width: 100%; font-family: 'Jost', sans-serif;" required></textarea>
+            <button type="submit" class="btn-black" onclick="event.preventDefault(); alert('Message Sent!');" style="padding: 1.2rem; width: 100%;">SEND MESSAGE</button>
+        </form>
+    </main>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <button class="close-btn" id="close-search">&times;</button>
+        <div class="search-container">
+            <h3>WHAT ARE YOU LOOKING FOR?</h3>
+            <form id="global-search-form" action="shop.html" method="GET">
+                <input type="text" name="search" placeholder="Search products..." required>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Overlay to avoid errors in JS script binding -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="footer-top">
+            <!-- Col 1 Logo -->
+            <div class="footer-col brand-col">
+                <div class="logo">
+                    <h1>Botique</h1>
+                    <span>FASHION</span>
+                </div>
+            </div>
+            <!-- Col 2 -->
+            <div class="footer-col">
+                <h4>Customer Service</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="shop.html">Shop with us</a>
+                <a href="contact.html">Faqs</a>
+            </div>
+            <!-- Col 3 -->
+            <div class="footer-col">
+                <h4>My Account</h4>
+                <a href="#">Login</a>
+                <a href="#">Account</a>
+                <a href="shop.html">Wishlist</a>
+                <a href="shop.html">Compare</a>
+            </div>
+            <!-- Col 4 -->
+            <div class="footer-col">
+                <h4>Information</h4>
+                <a href="#">Search</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Refund Policy</a>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <!-- Col 5 -->
+            <div class="footer-col stay-connect">
+                <h4>Stay Connect</h4>
+                <div class="social-circles">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="contact-info">
+                    <p>Email:<br>speedosaree@gmail.com</p>
+                    <p>Customer Care Number:<br>+91 9876543210</p>
+                </div>
+                <h4>Join with List</h4>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                    <input type="email" placeholder="Email" required>
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy;2026 Botique Fashion All Rights Reserved
+            </div>
+            <div class="bottom-settings">
+                <span class="dropdown">English <i class="fas fa-angle-down"></i></span>
+                <span class="dropdown"><img src="https://flagcdn.com/w20/us.png" alt="US" class="flag-icon"> USD <i class="fas fa-angle-down"></i></span>
+            </div>
+            <div class="payment-icons">
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-discover"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -68,8 +68,8 @@ ul { list-style: none; }
 .hero-banner { position: relative; height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: #fdf2ee; }
 .hero-background { position: absolute; inset: 0; background: url('images/hero-saree.png') center/cover no-repeat; opacity: 0.8; mix-blend-mode: multiply; filter: contrast(1.1) brightness(1.2); }
 .hero-content { position: relative; z-index: 2; padding: 2rem; }
-.hero-content h2 { font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 0.5rem; color: #eed76f; }
-.hero-content p { font-size: 1rem; color: #f8f4f43; margin-bottom: 2rem; letter-spacing: 0.5px; }
+.hero-content h2 { font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 0.5rem; color:  #ffd23e; }
+.hero-content p { font-size: 1rem; color:  #fffefa; margin-bottom: 2rem; letter-spacing: 0.5px; }
 
 /* 4. Features Bar */
 .features-bar { display: flex; justify-content: space-around; padding: 2.5rem 4%; border-bottom: 1px solid #ebebeb; max-width: 1400px; margin: 0 auto; }
